@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 3000
 
 let users = [];
 app.use(cors())
@@ -65,6 +65,6 @@ app.delete('/user/:id', (req, res) => {
     }
 })
 
-app.listen(4000, () =>
+app.listen(port, () =>
     console.log(`Example app listening on port 4000! , ${port}`),
 );
